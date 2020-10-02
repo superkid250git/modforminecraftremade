@@ -485,6 +485,33 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "rainbowdiamond"
+    },
+    {
+      "name": "Rr",
+      "type": "achievement",
+      "sortid": 50,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rr"
+    },
+    {
+      "name": "Opapple",
+      "type": "achievement",
+      "sortid": 51,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "opapple"
+    },
+    {
+      "name": "Flowerstaue",
+      "type": "block",
+      "sortid": 52,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "flowerstaue"
     }
   ],
   "variable_elements": [],
@@ -497,6 +524,8 @@
   ],
   "language_map": {
     "en_us": {
+      "advancements.rr.descr": "welcome to this mod",
+      "advancements.opapple.descr": "craft and eat a op golden apple",
       "enchantment.testi.test": "Test",
       "item.testi.enchantedslightlygoldenapple": "Enchanted slightly golden apple",
       "item.testi.test_12_boots": "Test Boots",
@@ -506,6 +535,7 @@
       "item.testi.notgold_armor_boots": "Notgold Boots",
       "item.testi.enchantedopgoldenapple": "Enchanted op golden apple",
       "item.testi.test_12_leggings": "Test Leggings",
+      "advancements.rr.title": "welcome",
       "item.testi.supergoldingot": "Super gold ingot",
       "item.testi.notgold_shovel": "Notgold Shovel",
       "item.testi.notgold_axe": "Notgold Axe",
@@ -513,6 +543,7 @@
       "item.testi.sightlygoldenapple": "Sightly golden apple",
       "block.testi.supergoldblock": "Super gold block",
       "item.testi.opgoldenapple": "Op golden apple",
+      "advancements.opapple.title": "Op apple",
       "item.testi.test_12_helmet": "Test Helmet",
       "entity.testi.fgem": "sam",
       "item.testi.notgold_sword": "Notgold Sword",
@@ -521,6 +552,7 @@
       "item.testi.rainbowdiamond": "Rainbow diamond",
       "item.testi.notgold_armor_chestplate": "Notgold Chestplate",
       "item.testi.hdm": "Hdm Spawn Egg",
+      "block.testi.flowerstaue": "Flowerstaue",
       "entity.testi.circus_baby": "Circus baby",
       "item.testi.justbeats.desc": "just nice sounds",
       "item.testi.bitcoin": "Bitcoin",

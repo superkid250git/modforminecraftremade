@@ -1,0 +1,11 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "m_1": "alex",
+        "m_0": "texture"
+      },
+      "name": "default"
+    }
+  }
+}

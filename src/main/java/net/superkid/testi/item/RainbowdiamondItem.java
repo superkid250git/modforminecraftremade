@@ -1,7 +1,6 @@
 
 package net.superkid.testi.item;
 
-import net.superkid.testi.itemgroup.NonameItemGroup;
 import net.superkid.testi.TestiModElements;
 
 import net.minecraftforge.registries.ObjectHolder;
@@ -24,7 +23,7 @@ public class RainbowdiamondItem extends TestiModElements.ModElement {
 	}
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
-			super(new Item.Properties().group(NonameItemGroup.tab).maxStackSize(64));
+			super(new Item.Properties().group(null).maxStackSize(64));
 			setRegistryName("rainbowdiamond");
 		}
 
