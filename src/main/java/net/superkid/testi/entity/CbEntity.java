@@ -60,7 +60,7 @@ public class CbEntity extends TestiModElements.ModElement {
 			BipedRenderer customRender = new BipedRenderer(renderManager, new BipedModel(0), 0.5f) {
 				@Override
 				public ResourceLocation getEntityTexture(Entity entity) {
-					return new ResourceLocation("testi:textures/test_layer_1.png");
+					return new ResourceLocation("testi:textures/cb.png");
 				}
 			};
 			customRender.addLayer(new BipedArmorLayer(customRender, new BipedModel(0.5f), new BipedModel(1)));

@@ -5,7 +5,7 @@
     "mobName": "Circus baby",
     "mobLabel": "",
     "mobModelName": "Biped",
-    "mobModelTexture": "test_layer_1.png",
+    "mobModelTexture": "cb.png",
     "mobModelGlowTexture": "",
     "modelWidth": 0.6,
     "modelHeight": 1.8,
