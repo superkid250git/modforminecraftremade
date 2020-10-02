@@ -1,0 +1,25 @@
+modLoader="javafml"
+loaderVersion="[31,)"
+
+[[mods]]
+modId="testi"
+version="1.0.0"
+displayName="testi"
+credits="nomn"
+displayURL="https://chao-island.com/viewer/"
+logoFile="logo.png"
+authors="superkid250"
+description='''
+UNKONOW YET
+'''
+
+[[dependencies.testi]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.15.2]"
+    ordering="NONE"
+    side="BOTH"
+
+
+
+

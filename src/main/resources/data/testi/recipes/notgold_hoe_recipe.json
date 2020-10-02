@@ -1,0 +1,27 @@
+{
+  "group": "testi",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "01",
+    " 3",
+    " 5"
+  ],
+  "key": {
+    "0": {
+      "item": "testi:notgoldingot"
+    },
+    "1": {
+      "item": "testi:notgoldingot"
+    },
+    "3": {
+      "item": "minecraft:stick"
+    },
+    "5": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "testi:notgold_hoe",
+    "count": 1
+  }
+}

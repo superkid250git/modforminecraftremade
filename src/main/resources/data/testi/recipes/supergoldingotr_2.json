@@ -1,0 +1,13 @@
+{
+  "group": "testi",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "testi:supergoldblock"
+    }
+  ],
+  "result": {
+    "item": "testi:supergoldingot",
+    "count": 9
+  }
+}

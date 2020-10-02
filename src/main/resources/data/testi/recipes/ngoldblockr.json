@@ -1,0 +1,37 @@
+{
+  "group": "testi",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "testi:notgoldingot"
+    },
+    {
+      "item": "testi:notgoldingot"
+    },
+    {
+      "item": "testi:notgoldingot"
+    },
+    {
+      "item": "testi:notgoldingot"
+    },
+    {
+      "item": "testi:notgoldingot"
+    },
+    {
+      "item": "testi:notgoldingot"
+    },
+    {
+      "item": "testi:notgoldingot"
+    },
+    {
+      "item": "testi:notgoldingot"
+    },
+    {
+      "item": "testi:notgoldingot"
+    }
+  ],
+  "result": {
+    "item": "testi:notgoldblock",
+    "count": 1
+  }
+}

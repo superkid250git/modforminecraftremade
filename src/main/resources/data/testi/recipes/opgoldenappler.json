@@ -1,0 +1,37 @@
+{
+  "group": "testi",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "testi:supergoldingot"
+    },
+    {
+      "item": "testi:supergoldingot"
+    },
+    {
+      "item": "testi:supergoldingot"
+    },
+    {
+      "item": "testi:supergoldingot"
+    },
+    {
+      "item": "minecraft:apple"
+    },
+    {
+      "item": "testi:supergoldingot"
+    },
+    {
+      "item": "testi:supergoldingot"
+    },
+    {
+      "item": "testi:supergoldingot"
+    },
+    {
+      "item": "testi:supergoldingot"
+    }
+  ],
+  "result": {
+    "item": "testi:opgoldenapple",
+    "count": 1
+  }
+}

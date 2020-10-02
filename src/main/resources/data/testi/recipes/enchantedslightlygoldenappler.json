@@ -1,0 +1,42 @@
+{
+  "group": "testi",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "testi:notgoldblock"
+    },
+    "1": {
+      "item": "testi:notgoldblock"
+    },
+    "2": {
+      "item": "testi:notgoldblock"
+    },
+    "3": {
+      "item": "testi:notgoldblock"
+    },
+    "4": {
+      "item": "minecraft:apple"
+    },
+    "5": {
+      "item": "testi:notgoldblock"
+    },
+    "6": {
+      "item": "testi:notgoldblock"
+    },
+    "7": {
+      "item": "testi:notgoldblock"
+    },
+    "8": {
+      "item": "testi:notgoldblock"
+    }
+  },
+  "result": {
+    "item": "testi:enchantedslightlygoldenapple",
+    "count": 1
+  }
+}

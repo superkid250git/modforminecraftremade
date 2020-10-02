@@ -1,0 +1,16 @@
+{
+  "group": "testi",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0"
+  ],
+  "key": {
+    "0": {
+      "item": "testi:notgoldblock"
+    }
+  },
+  "result": {
+    "item": "testi:notgoldingot",
+    "count": 9
+  }
+}

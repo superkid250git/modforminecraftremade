@@ -1,0 +1,11 @@
+{
+  "odd": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "testi:odd",
+        "stream": true
+      }
+    ]
+  }
+}

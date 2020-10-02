@@ -1,0 +1,46 @@
+{
+  "_fv": 10,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 1,
+    "group": "",
+    "recipeShapeless": true,
+    "recipeSlots": [
+      {
+        "value": "CUSTOM:Supergoldblock"
+      },
+      {
+        "value": "CUSTOM:Supergoldblock"
+      },
+      {
+        "value": "CUSTOM:Supergoldblock"
+      },
+      {
+        "value": "CUSTOM:Supergoldblock"
+      },
+      {
+        "value": "Items.APPLE"
+      },
+      {
+        "value": "CUSTOM:Supergoldblock"
+      },
+      {
+        "value": "CUSTOM:Supergoldblock"
+      },
+      {
+        "value": "CUSTOM:Supergoldblock"
+      },
+      {
+        "value": "CUSTOM:Supergoldblock"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:Enchantedopgoldenapple"
+    },
+    "name": "enchantedopgoldenappler",
+    "namespace": "mod"
+  }
+}

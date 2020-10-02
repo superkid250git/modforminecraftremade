@@ -1,0 +1,37 @@
+{
+  "group": "testi",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "testi:supergoldblock"
+    },
+    {
+      "item": "testi:supergoldblock"
+    },
+    {
+      "item": "testi:supergoldblock"
+    },
+    {
+      "item": "testi:supergoldblock"
+    },
+    {
+      "item": "minecraft:apple"
+    },
+    {
+      "item": "testi:supergoldblock"
+    },
+    {
+      "item": "testi:supergoldblock"
+    },
+    {
+      "item": "testi:supergoldblock"
+    },
+    {
+      "item": "testi:supergoldblock"
+    }
+  ],
+  "result": {
+    "item": "testi:enchantedopgoldenapple",
+    "count": 1
+  }
+}

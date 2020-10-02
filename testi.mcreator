@@ -1,0 +1,557 @@
+{
+  "id_map": {},
+  "mod_elements": [
+    {
+      "name": "SightlygoldenappleFoodEaten",
+      "type": "procedure",
+      "sortid": 20,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "sightlygoldenapple_food_eaten",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Sightlygoldenapple",
+      "type": "food",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "sightlygoldenapple"
+    },
+    {
+      "name": "Noname",
+      "type": "tab",
+      "sortid": 21,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "noname"
+    },
+    {
+      "name": "Ngoldingot",
+      "type": "item",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "notgoldingot"
+    },
+    {
+      "name": "Ngoldingotr",
+      "type": "recipe",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ngoldingotr"
+    },
+    {
+      "name": "Ngoldblockr",
+      "type": "recipe",
+      "sortid": 23,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ngoldblockr"
+    },
+    {
+      "name": "EnchantedslightlygoldenappleFoodEaten",
+      "type": "procedure",
+      "sortid": 24,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "enchantedslightlygoldenapple_food_eaten",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Enchantedslightlygoldenapple",
+      "type": "food",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "enchantedslightlygoldenapple"
+    },
+    {
+      "name": "Ngoldblock",
+      "type": "block",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "notgoldblock"
+    },
+    {
+      "name": "Supergoldingot",
+      "type": "item",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "supergoldingot"
+    },
+    {
+      "name": "Supergoldingotr",
+      "type": "recipe",
+      "sortid": 25,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "supergoldingotr"
+    },
+    {
+      "name": "Enchantedopgoldenapplefoodeaten",
+      "type": "procedure",
+      "sortid": 26,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "enchantedopgoldenapplefoodeaten",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Opgoldenapplefoodeaten",
+      "type": "procedure",
+      "sortid": 27,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "opgoldenapplefoodeaten",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Supergoldblock",
+      "type": "block",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "supergoldblock"
+    },
+    {
+      "name": "Supergoldblocksr",
+      "type": "recipe",
+      "sortid": 28,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "supergoldblocksr"
+    },
+    {
+      "name": "Supergoldingotr2",
+      "type": "recipe",
+      "sortid": 29,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "supergoldingotr_2"
+    },
+    {
+      "name": "Ngoldingotr2",
+      "type": "recipe",
+      "sortid": 30,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ngoldingotr_2"
+    },
+    {
+      "name": "Pawprint",
+      "type": "item",
+      "sortid": 19,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pawprint"
+    },
+    {
+      "name": "Test",
+      "type": "enchantment",
+      "sortid": 31,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "test"
+    },
+    {
+      "name": "Justbeats",
+      "type": "musicdisc",
+      "sortid": 18,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "justbeats"
+    },
+    {
+      "name": "NotgoldPickaxe",
+      "type": "tool",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "notgold_pickaxe"
+    },
+    {
+      "name": "NotgoldAxe",
+      "type": "tool",
+      "sortid": 10,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "notgold_axe"
+    },
+    {
+      "name": "NotgoldSword",
+      "type": "tool",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "notgold_sword"
+    },
+    {
+      "name": "NotgoldShovel",
+      "type": "tool",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "notgold_shovel"
+    },
+    {
+      "name": "NotgoldHoe",
+      "type": "tool",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "notgold_hoe"
+    },
+    {
+      "name": "NotgoldPickaxeRecipe",
+      "type": "recipe",
+      "sortid": 32,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "notgold_pickaxe_recipe"
+    },
+    {
+      "name": "NotgoldAxeRecipe",
+      "type": "recipe",
+      "sortid": 33,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "notgold_axe_recipe"
+    },
+    {
+      "name": "NotgoldSwordRecipe",
+      "type": "recipe",
+      "sortid": 34,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "notgold_sword_recipe"
+    },
+    {
+      "name": "NotgoldShovelRecipe",
+      "type": "recipe",
+      "sortid": 35,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "notgold_shovel_recipe"
+    },
+    {
+      "name": "NotgoldHoeRecipe",
+      "type": "recipe",
+      "sortid": 36,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "notgold_hoe_recipe"
+    },
+    {
+      "name": "NotgoldArmor",
+      "type": "armor",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "notgold_armor",
+      "metadata": {
+        "eh": true,
+        "el": true,
+        "eb": true,
+        "ec": true
+      }
+    },
+    {
+      "name": "NotgoldArmorHelmetRecipe",
+      "type": "recipe",
+      "sortid": 37,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "notgold_armor_helmet_recipe"
+    },
+    {
+      "name": "NotgoldArmorBodyRecipe",
+      "type": "recipe",
+      "sortid": 38,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "notgold_armor_body_recipe"
+    },
+    {
+      "name": "NotgoldArmorLeggingsRecipe",
+      "type": "recipe",
+      "sortid": 39,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "notgold_armor_leggings_recipe"
+    },
+    {
+      "name": "NotgoldArmorBootsRecipe",
+      "type": "recipe",
+      "sortid": 40,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "notgold_armor_boots_recipe"
+    },
+    {
+      "name": "Test12",
+      "type": "armor",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "test_12",
+      "metadata": {
+        "eh": true,
+        "el": true,
+        "eb": true,
+        "ec": true
+      }
+    },
+    {
+      "name": "Opgoldenappler",
+      "type": "recipe",
+      "sortid": 41,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "opgoldenappler"
+    },
+    {
+      "name": "Opgoldenapple",
+      "type": "food",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "opgoldenapple"
+    },
+    {
+      "name": "Enchantedopgoldenappler",
+      "type": "recipe",
+      "sortid": 42,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "enchantedopgoldenappler"
+    },
+    {
+      "name": "Enchantedopgoldenapple",
+      "type": "food",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "enchantedopgoldenapple"
+    },
+    {
+      "name": "Burrito",
+      "type": "food",
+      "sortid": 16,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "burrito"
+    },
+    {
+      "name": "BITCOIN",
+      "type": "item",
+      "sortid": 17,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bitcoin"
+    },
+    {
+      "name": "Burritor",
+      "type": "recipe",
+      "sortid": 43,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "burritor"
+    },
+    {
+      "name": "Cb",
+      "type": "mob",
+      "sortid": 44,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "circus_baby"
+    },
+    {
+      "name": "Hdm",
+      "type": "mob",
+      "sortid": 45,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "hdm"
+    },
+    {
+      "name": "Enchantedslightlygoldenappler",
+      "type": "recipe",
+      "sortid": 46,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "enchantedslightlygoldenappler"
+    },
+    {
+      "name": "Sightlygoldenappler",
+      "type": "recipe",
+      "sortid": 47,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "sightlygoldenappler"
+    },
+    {
+      "name": "Fgem",
+      "type": "mob",
+      "sortid": 48,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "fgem"
+    },
+    {
+      "name": "Rainbowdiamond",
+      "type": "item",
+      "sortid": 49,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rainbowdiamond"
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [
+    {
+      "name": "odd",
+      "file": "odd",
+      "category": "record"
+    }
+  ],
+  "language_map": {
+    "en_us": {
+      "enchantment.testi.test": "Test",
+      "item.testi.enchantedslightlygoldenapple": "Enchanted slightly golden apple",
+      "item.testi.test_12_boots": "Test Boots",
+      "item.testi.test_12_chestplate": "Test Body",
+      "item.testi.notgold_hoe": "Notgold Hoe",
+      "item.testi.fgem": "sam Spawn Egg",
+      "item.testi.notgold_armor_boots": "Notgold Boots",
+      "item.testi.enchantedopgoldenapple": "Enchanted op golden apple",
+      "item.testi.test_12_leggings": "Test Leggings",
+      "item.testi.supergoldingot": "Super gold ingot",
+      "item.testi.notgold_shovel": "Notgold Shovel",
+      "item.testi.notgold_axe": "Notgold Axe",
+      "item.testi.burrito": "Burrito",
+      "item.testi.sightlygoldenapple": "Sightly golden apple",
+      "block.testi.supergoldblock": "Super gold block",
+      "item.testi.opgoldenapple": "Op golden apple",
+      "item.testi.test_12_helmet": "Test Helmet",
+      "entity.testi.fgem": "sam",
+      "item.testi.notgold_sword": "Notgold Sword",
+      "item.testi.notgold_armor_leggings": "Notgold Leggings",
+      "itemGroup.tabnoname": "Noname",
+      "item.testi.rainbowdiamond": "Rainbow diamond",
+      "item.testi.notgold_armor_chestplate": "Notgold Chestplate",
+      "item.testi.hdm": "Hdm Spawn Egg",
+      "entity.testi.circus_baby": "Circus baby",
+      "item.testi.justbeats.desc": "just nice sounds",
+      "item.testi.bitcoin": "Bitcoin",
+      "item.testi.circus_baby": "Circus baby Spawn Egg",
+      "item.testi.notgold_pickaxe": "Notgold Pickaxe",
+      "item.testi.notgoldingot": "Not gold ingot",
+      "item.testi.justbeats": "Justbeats",
+      "item.testi.notgold_armor_helmet": "Notgold Helmet",
+      "item.testi.pawprint": "Pawprint",
+      "block.testi.notgoldblock": "Not gold block",
+      "entity.testi.hdm": "Hdm"
+    }
+  },
+  "workspaceSettings": {
+    "modid": "testi",
+    "modName": "testi",
+    "version": "1.0.0",
+    "description": "UNKONOW YET",
+    "author": "superkid250",
+    "websiteURL": "https://chao-island.com/viewer/",
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": false,
+    "modPicture": "f1",
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "forge-1.15.2",
+    "credits": "nomn",
+    "modElementsPackage": "net.superkid.testi",
+    "lockBaseModFiles": false
+  },
+  "mcreatorVersion": 202000432115
+}

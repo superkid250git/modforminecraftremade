@@ -1,0 +1,29 @@
+{
+  "group": "testi",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "3 5"
+  ],
+  "key": {
+    "0": {
+      "item": "testi:notgoldingot"
+    },
+    "1": {
+      "item": "testi:notgoldingot"
+    },
+    "2": {
+      "item": "testi:notgoldingot"
+    },
+    "3": {
+      "item": "testi:notgoldingot"
+    },
+    "5": {
+      "item": "testi:notgoldingot"
+    }
+  },
+  "result": {
+    "item": "testi:notgold_armor_helmet",
+    "count": 1
+  }
+}

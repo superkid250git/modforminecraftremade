@@ -1,0 +1,30 @@
+{
+  "group": "testi",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    " 4 ",
+    " 7 "
+  ],
+  "key": {
+    "0": {
+      "item": "testi:notgoldingot"
+    },
+    "1": {
+      "item": "testi:notgoldingot"
+    },
+    "2": {
+      "item": "testi:notgoldingot"
+    },
+    "4": {
+      "item": "minecraft:stick"
+    },
+    "7": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "testi:notgold_pickaxe",
+    "count": 1
+  }
+}

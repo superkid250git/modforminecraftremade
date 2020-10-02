@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "testi:blocks/super_brillante_bloque_de_oro",
+    "up": "testi:blocks/super_brillante_bloque_de_oro",
+    "north": "testi:blocks/super_brillante_bloque_de_oro",
+    "east": "testi:blocks/super_brillante_bloque_de_oro",
+    "south": "testi:blocks/super_brillante_bloque_de_oro",
+    "west": "testi:blocks/super_brillante_bloque_de_oro",
+    "particle": "testi:blocks/super_brillante_bloque_de_oro"
+  }
+}
