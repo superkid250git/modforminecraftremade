@@ -1,0 +1,17 @@
+{
+  "_fv": 10,
+  "_type": "musicdisc",
+  "definition": {
+    "texture": "wish_now",
+    "name": "Ulitmate Custom Night Main Menu",
+    "description": "Ulitmate Custom Night Main Menu",
+    "creativeTab": {
+      "value": "CUSTOM:Noname"
+    },
+    "music": {
+      "value": "CUSTOM:fanf_ultimate_custom_night_main_menu_theme"
+    },
+    "specialInfo": [],
+    "hasGlow": false
+  }
+}

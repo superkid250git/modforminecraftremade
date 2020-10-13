@@ -7,5 +7,14 @@
         "stream": true
       }
     ]
+  },
+  "fanf_ultimate_custom_night_main_menu_theme": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "testi:ultimate_custom_night_-_main_menu_theme_extended_hq_-_eisoptrophobia",
+        "stream": true
+      }
+    ]
   }
 }

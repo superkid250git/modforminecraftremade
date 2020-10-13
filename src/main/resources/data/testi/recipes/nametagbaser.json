@@ -1,0 +1,19 @@
+{
+  "group": "testi",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:paper"
+    },
+    {
+      "item": "minecraft:ink_sac"
+    },
+    {
+      "item": "minecraft:feather"
+    }
+  ],
+  "result": {
+    "item": "testi:nametagbase",
+    "count": 1
+  }
+}

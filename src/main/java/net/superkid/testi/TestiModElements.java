@@ -48,6 +48,8 @@ public class TestiModElements {
 	public static Map<ResourceLocation, net.minecraft.util.SoundEvent> sounds = new HashMap<>();
 	public TestiModElements() {
 		sounds.put(new ResourceLocation("testi", "odd"), new net.minecraft.util.SoundEvent(new ResourceLocation("testi", "odd")));
+		sounds.put(new ResourceLocation("testi", "fanf_ultimate_custom_night_main_menu_theme"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("testi", "fanf_ultimate_custom_night_main_menu_theme")));
 		try {
 			ModFileScanData modFileInfo = ModList.get().getModFileById("testi").getFile().getScanResult();
 			Set<ModFileScanData.AnnotationData> annotations = modFileInfo.getAnnotations();

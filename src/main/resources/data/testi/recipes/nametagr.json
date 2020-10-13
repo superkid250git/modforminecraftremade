@@ -1,0 +1,16 @@
+{
+  "group": "testi",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "testi:nametagbase"
+    },
+    {
+      "item": "minecraft:string"
+    }
+  ],
+  "result": {
+    "item": "minecraft:name_tag",
+    "count": 1
+  }
+}
