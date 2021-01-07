@@ -508,7 +508,7 @@
       "name": "Flowerstaue",
       "type": "block",
       "sortid": 52,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "ids": {},
       "registry_name": "flowerstaue"
@@ -548,66 +548,549 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "ulitmate_custom_night_main_menu"
+    },
+    {
+      "name": "Superkid250logo",
+      "type": "painting",
+      "sortid": 57,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "superkid_250logo"
+    },
+    {
+      "name": "Convertergui",
+      "type": "gui",
+      "sortid": 58,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "convertergui"
+    },
+    {
+      "name": "CutepigItIsStruckByLightning",
+      "type": "procedure",
+      "sortid": 59,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "cutepig_it_is_struck_by_lightning",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Creepergirl",
+      "type": "mob",
+      "sortid": 59,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "creepergirl"
+    },
+    {
+      "name": "Cutepig",
+      "type": "mob",
+      "sortid": 59,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "cutepig"
+    },
+    {
+      "name": "Tt",
+      "type": "mob",
+      "sortid": 59,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "tt"
+    },
+    {
+      "name": "Ruby",
+      "type": "mob",
+      "sortid": 59,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ruby"
+    },
+    {
+      "name": "Gemmathecreepergirl",
+      "type": "mob",
+      "sortid": 59,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "gemmathecreepergirl"
+    },
+    {
+      "name": "Ldshadowcreeper",
+      "type": "mob",
+      "sortid": 59,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ldshadowcreeper"
+    },
+    {
+      "name": "Ghastgirl",
+      "type": "mob",
+      "sortid": 59,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ghastgirl"
+    },
+    {
+      "name": "Highschoolcreepergirl",
+      "type": "mob",
+      "sortid": 59,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "highschoolcreepergirl"
+    },
+    {
+      "name": "Sadghast",
+      "type": "mob",
+      "sortid": 59,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "sadghast"
+    },
+    {
+      "name": "Creator",
+      "type": "mob",
+      "sortid": 59,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "creator"
+    },
+    {
+      "name": "Zombiegirl",
+      "type": "mob",
+      "sortid": 59,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "zombiegirl"
+    },
+    {
+      "name": "Zombiepiggirl",
+      "type": "mob",
+      "sortid": 59,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "zombiepiggirl"
+    },
+    {
+      "name": "Timenight",
+      "type": "procedure",
+      "sortid": 59,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "timenight",
+      "metadata": {
+        "dependencies": []
+      }
+    },
+    {
+      "name": "Timeday",
+      "type": "procedure",
+      "sortid": 59,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "timeday",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Converter",
+      "type": "block",
+      "sortid": 58,
+      "compiles": false,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "converter"
+    },
+    {
+      "name": "Cute2",
+      "type": "painting",
+      "sortid": 58,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "cute_2"
+    },
+    {
+      "name": "Adminstickgui",
+      "type": "gui",
+      "sortid": 59,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "adminstickgui"
+    },
+    {
+      "name": "Scam",
+      "type": "painting",
+      "sortid": 58,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "scam"
+    },
+    {
+      "name": "Open1",
+      "type": "painting",
+      "sortid": 58,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "open_1"
+    },
+    {
+      "name": "See",
+      "type": "painting",
+      "sortid": 58,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "see"
+    },
+    {
+      "name": "Cool",
+      "type": "painting",
+      "sortid": 58,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "cool"
+    },
+    {
+      "name": "Sea",
+      "type": "painting",
+      "sortid": 58,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "sea"
+    },
+    {
+      "name": "Open",
+      "type": "painting",
+      "sortid": 58,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "open"
+    },
+    {
+      "name": "Noo",
+      "type": "painting",
+      "sortid": 58,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "noo"
+    },
+    {
+      "name": "Noo1",
+      "type": "painting",
+      "sortid": 58,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "noo_1"
+    },
+    {
+      "name": "Nice",
+      "type": "painting",
+      "sortid": 58,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "nice"
+    },
+    {
+      "name": "See1",
+      "type": "painting",
+      "sortid": 58,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "see_1"
+    },
+    {
+      "name": "Nice1",
+      "type": "painting",
+      "sortid": 58,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "nice_1"
+    },
+    {
+      "name": "Lgs",
+      "type": "painting",
+      "sortid": 58,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "lgs"
+    },
+    {
+      "name": "Cute",
+      "type": "painting",
+      "sortid": 58,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "cute"
+    },
+    {
+      "name": "Cool2",
+      "type": "painting",
+      "sortid": 58,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "cool_2"
+    },
+    {
+      "name": "Sea1",
+      "type": "painting",
+      "sortid": 58,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "sea_1"
+    },
+    {
+      "name": "Setrain",
+      "type": "procedure",
+      "sortid": 60,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "setrain",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Adminstick",
+      "type": "item",
+      "sortid": 59,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "adminstick"
+    },
+    {
+      "name": "Togglegamemode",
+      "type": "procedure",
+      "sortid": 61,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "togglegamemode",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Goldtodiamond",
+      "type": "procedure",
+      "sortid": 62,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "goldtodiamond",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
   "sound_elements": [
     {
       "name": "odd",
-      "file": "odd",
+      "files": [
+        "odd"
+      ],
       "category": "record"
     },
     {
       "name": "fanf_ultimate_custom_night_main_menu_theme",
-      "file": "ultimate_custom_night_-_main_menu_theme_extended_hq_-_eisoptrophobia",
+      "files": [
+        "ultimate_custom_night_-_main_menu_theme_extended_hq_-_eisoptrophobia"
+      ],
       "category": "music"
     }
   ],
   "language_map": {
     "en_us": {
       "advancements.rr.descr": "welcome to this mod",
-      "advancements.opapple.descr": "craft and eat a op golden apple",
       "enchantment.testi.test": "Test",
-      "item.testi.enchantedslightlygoldenapple": "Enchanted slightly golden apple",
+      "entity.testi.zombiegirl": "Zombie girl",
       "item.testi.test_12_boots": "Test Boots",
-      "item.testi.nametagbase": "Nametagbase",
-      "item.testi.test_12_chestplate": "Test Body",
-      "item.testi.notgold_hoe": "Notgold Hoe",
-      "item.testi.fgem": "sam Spawn Egg",
-      "item.testi.notgold_armor_boots": "Notgold Boots",
+      "entity.testi.zombiepiggirl": "Zombie pig girl",
+      "entity.testi.tt": "Tt",
+      "item.testi.creator_spawn_egg": "Creator Spawn Egg",
+      "item.testi.ldshadowcreeper_spawn_egg": "Ldshadowcreeper Spawn Egg",
       "item.testi.enchantedopgoldenapple": "Enchanted op golden apple",
-      "item.testi.test_12_leggings": "Test Leggings",
+      "entity.testi.ruby": "Ruby",
       "advancements.rr.title": "welcome",
       "item.testi.supergoldingot": "Super gold ingot",
-      "item.testi.notgold_shovel": "Notgold Shovel",
+      "entity.testi.highschoolcreepergirl": "Highschoolcreepergirl",
       "item.testi.notgold_axe": "Notgold Axe",
       "item.testi.burrito": "Burrito",
       "item.testi.sightlygoldenapple": "Sightly golden apple",
-      "block.testi.supergoldblock": "Super gold block",
+      "entity.testi.ldshadowcreeper": "Ldshadowcreeper",
       "item.testi.opgoldenapple": "Op golden apple",
-      "advancements.opapple.title": "Op apple",
-      "item.testi.test_12_helmet": "Test Helmet",
+      "item.testi.hdm_spawn_egg": "Hdm Spawn Egg",
       "entity.testi.fgem": "sam",
       "item.testi.notgold_sword": "Notgold Sword",
       "item.testi.notgold_armor_leggings": "Notgold Leggings",
-      "item.testi.ulitmate_custom_night_main_menu": "Ulitmate Custom Night Main Menu",
       "itemGroup.tabnoname": "Noname",
-      "item.testi.rainbowdiamond": "Rainbow diamond",
       "item.testi.notgold_armor_chestplate": "Notgold Chestplate",
-      "item.testi.hdm": "Hdm Spawn Egg",
-      "block.testi.flowerstaue": "Flower trophy",
+      "item.testi.sadghast_spawn_egg": "Sadghast Spawn Egg",
       "entity.testi.circus_baby": "Circus baby",
-      "item.testi.justbeats.desc": "just nice sounds",
       "item.testi.bitcoin": "Bitcoin",
-      "item.testi.circus_baby": "Circus baby Spawn Egg",
-      "item.testi.notgold_pickaxe": "Notgold Pickaxe",
+      "item.testi.justbeats.desc": "just nice sounds",
+      "item.testi.cutepig_spawn_egg": "Cutepig Spawn Egg",
       "item.testi.notgoldingot": "Not gold ingot",
+      "item.testi.fgem_spawn_egg": "sam Spawn Egg",
       "item.testi.justbeats": "Justbeats",
-      "item.testi.notgold_armor_helmet": "Notgold Helmet",
       "item.testi.pawprint": "Pawprint",
       "item.testi.ulitmate_custom_night_main_menu.desc": "Ulitmate Custom Night Main Menu",
-      "block.testi.notgoldblock": "Not gold block",
-      "entity.testi.hdm": "Hdm"
+      "entity.testi.hdm": "Hdm",
+      "item.testi.creepergirl_spawn_egg": "Creeper girl Spawn Egg",
+      "advancements.opapple.descr": "craft and eat a op golden apple",
+      "item.testi.enchantedslightlygoldenapple": "Enchanted slightly golden apple",
+      "item.testi.gemmathecreepergirl_spawn_egg": "Gemmathecreepergirl Spawn Egg",
+      "item.testi.nametagbase": "Nametagbase",
+      "entity.testi.creator": "Creator",
+      "item.testi.test_12_chestplate": "Test Body",
+      "item.testi.notgold_hoe": "Notgold Hoe",
+      "item.testi.fgem": "sam Spawn Egg",
+      "item.testi.zombiegirl_spawn_egg": "Zombie girl Spawn Egg",
+      "item.testi.notgold_armor_boots": "Notgold Boots",
+      "item.testi.ghastgirl_spawn_egg": "Ghastgirl Spawn Egg",
+      "item.testi.ruby_spawn_egg": "Ruby Spawn Egg",
+      "item.testi.test_12_leggings": "Test Leggings",
+      "item.testi.notgold_shovel": "Notgold Shovel",
+      "item.testi.highschoolcreepergirl_spawn_egg": "Highschoolcreepergirl Spawn Egg",
+      "block.testi.supergoldblock": "Super gold block",
+      "advancements.opapple.title": "Op apple",
+      "item.testi.zombiepiggirl_spawn_egg": "Zombie pig girl Spawn Egg",
+      "entity.testi.ghastgirl": "Ghastgirl",
+      "item.testi.circus_baby_spawn_egg": "Circus baby Spawn Egg",
+      "item.testi.test_12_helmet": "Test Helmet",
+      "item.testi.ulitmate_custom_night_main_menu": "Ulitmate Custom Night Main Menu",
+      "entity.testi.gemmathecreepergirl": "Gemmathecreepergirl",
+      "item.testi.rainbowdiamond": "Rainbow diamond",
+      "entity.testi.cutepig": "Cutepig",
+      "item.testi.hdm": "Hdm Spawn Egg",
+      "block.testi.flowerstaue": "Flower trophy",
+      "block.testi.converter": "Converter",
+      "item.testi.circus_baby": "Circus baby Spawn Egg",
+      "item.testi.notgold_pickaxe": "Notgold Pickaxe",
+      "entity.testi.creepergirl": "Creeper girl",
+      "item.testi.adminstick": "Adminstick",
+      "item.testi.tt_spawn_egg": "Tt Spawn Egg",
+      "item.testi.notgold_armor_helmet": "Notgold Helmet",
+      "entity.testi.sadghast": "Sadghast",
+      "block.testi.notgoldblock": "Not gold block"
     }
   },
   "workspaceSettings": {
@@ -629,5 +1112,5 @@
     "modElementsPackage": "net.superkid.testi",
     "lockBaseModFiles": false
   },
-  "mcreatorVersion": 202000432115
+  "mcreatorVersion": 202000547520
 }

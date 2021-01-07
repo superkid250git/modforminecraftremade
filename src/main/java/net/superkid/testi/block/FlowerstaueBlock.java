@@ -1,35 +1,11 @@
 
 package net.superkid.testi.block;
 
+import org.omg.CORBA.ObjectHolder;
+
 import net.superkid.testi.TestiModElements;
 
-import net.minecraftforge.registries.ObjectHolder;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.api.distmarker.Dist;
-
-import net.minecraft.world.storage.loot.LootContext;
-import net.minecraft.world.IBlockReader;
-import net.minecraft.util.math.shapes.VoxelShapes;
-import net.minecraft.util.math.shapes.VoxelShape;
-import net.minecraft.util.math.shapes.ISelectionContext;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.Rotation;
-import net.minecraft.util.Mirror;
-import net.minecraft.util.Direction;
-import net.minecraft.state.StateContainer;
-import net.minecraft.state.DirectionProperty;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Item;
-import net.minecraft.item.BlockItemUseContext;
-import net.minecraft.item.BlockItem;
-import net.minecraft.client.renderer.RenderTypeLookup;
-import net.minecraft.client.renderer.RenderType;
 import net.minecraft.block.material.Material;
-import net.minecraft.block.SoundType;
-import net.minecraft.block.DirectionalBlock;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.Block;
 
 import java.util.List;
 import java.util.Collections;
@@ -79,20 +55,21 @@ public class FlowerstaueBlock extends TestiModElements.ModElement {
 
 		@Override
 		public VoxelShape getShape(BlockState state, IBlockReader world, BlockPos pos, ISelectionContext context) {
+			Vec3d offset = state.getOffset(world, pos);
 			switch ((Direction) state.get(FACING)) {
 				case SOUTH :
 				default :
-					return VoxelShapes.create(1D, 0D, 1D, 0D, 2.1D, 0D);
+					return VoxelShapes.create(1D, 0D, 1D, 0D, 2.1D, 0D).withOffset(offset.x, offset.y, offset.z);
 				case NORTH :
-					return VoxelShapes.create(0D, 0D, 0D, 1D, 2.1D, 1D);
+					return VoxelShapes.create(0D, 0D, 0D, 1D, 2.1D, 1D).withOffset(offset.x, offset.y, offset.z);
 				case WEST :
-					return VoxelShapes.create(0D, 0D, 1D, 1D, 2.1D, 0D);
+					return VoxelShapes.create(0D, 0D, 1D, 1D, 2.1D, 0D).withOffset(offset.x, offset.y, offset.z);
 				case EAST :
-					return VoxelShapes.create(1D, 0D, 0D, 0D, 2.1D, 1D);
+					return VoxelShapes.create(1D, 0D, 0D, 0D, 2.1D, 1D).withOffset(offset.x, offset.y, offset.z);
 				case UP :
-					return VoxelShapes.create(0D, 1D, 0D, 1D, 0D, 2.1D);
+					return VoxelShapes.create(0D, 1D, 0D, 1D, 0D, 2.1D).withOffset(offset.x, offset.y, offset.z);
 				case DOWN :
-					return VoxelShapes.create(0D, 0D, 1D, 1D, 1D, -1.1D);
+					return VoxelShapes.create(0D, 0D, 1D, 1D, 1D, -1.1D).withOffset(offset.x, offset.y, offset.z);
 			}
 		}
 
@@ -111,6 +88,7 @@ public class FlowerstaueBlock extends TestiModElements.ModElement {
 
 		@Override
 		public BlockState getStateForPlacement(BlockItemUseContext context) {
+			;
 			return this.getDefaultState().with(FACING, context.getNearestLookingDirection().getOpposite());
 		}
 

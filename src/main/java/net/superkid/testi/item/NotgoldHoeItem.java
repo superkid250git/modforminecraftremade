@@ -1,16 +1,10 @@
 
 package net.superkid.testi.item;
 
+import org.omg.CORBA.ObjectHolder;
+
 import net.superkid.testi.itemgroup.NonameItemGroup;
 import net.superkid.testi.TestiModElements;
-
-import net.minecraftforge.registries.ObjectHolder;
-
-import net.minecraft.item.crafting.Ingredient;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Item;
-import net.minecraft.item.IItemTier;
-import net.minecraft.item.HoeItem;
 
 @TestiModElements.ModElement.Tag
 public class NotgoldHoeItem extends TestiModElements.ModElement {

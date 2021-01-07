@@ -4,37 +4,6 @@ package net.superkid.testi.entity;
 import net.superkid.testi.itemgroup.NonameItemGroup;
 import net.superkid.testi.TestiModElements;
 
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.fml.network.NetworkHooks;
-import net.minecraftforge.fml.network.FMLPlayMessages;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.fml.client.registry.RenderingRegistry;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.client.event.ModelRegistryEvent;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.api.distmarker.Dist;
-
-import net.minecraft.world.World;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.DamageSource;
-import net.minecraft.network.IPacket;
-import net.minecraft.item.SpawnEggItem;
-import net.minecraft.item.Item;
-import net.minecraft.entity.monster.MonsterEntity;
-import net.minecraft.entity.ai.goal.SwimGoal;
-import net.minecraft.entity.ai.goal.RandomWalkingGoal;
-import net.minecraft.entity.ai.goal.MeleeAttackGoal;
-import net.minecraft.entity.ai.goal.LookRandomlyGoal;
-import net.minecraft.entity.ai.goal.HurtByTargetGoal;
-import net.minecraft.entity.SharedMonsterAttributes;
-import net.minecraft.entity.EntityType;
-import net.minecraft.entity.EntityClassification;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.CreatureAttribute;
-import net.minecraft.client.renderer.entity.model.BipedModel;
-import net.minecraft.client.renderer.entity.layers.BipedArmorLayer;
-import net.minecraft.client.renderer.entity.BipedRenderer;
-
 @TestiModElements.ModElement.Tag
 public class HdmEntity extends TestiModElements.ModElement {
 	public static EntityType entity = null;
@@ -49,8 +18,8 @@ public class HdmEntity extends TestiModElements.ModElement {
 				.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).size(0.6f, 1.8f)).build("hdm")
 						.setRegistryName("hdm");
 		elements.entities.add(() -> entity);
-		elements.items
-				.add(() -> new SpawnEggItem(entity, -13369549, -16711681, new Item.Properties().group(NonameItemGroup.tab)).setRegistryName("hdm"));
+		elements.items.add(() -> new SpawnEggItem(entity, -13369549, -16711681, new Item.Properties().group(NonameItemGroup.tab))
+				.setRegistryName("hdm_spawn_egg"));
 	}
 
 	@SubscribeEvent
@@ -102,10 +71,6 @@ public class HdmEntity extends TestiModElements.ModElement {
 		@Override
 		public boolean canDespawn(double distanceToClosestPlayer) {
 			return false;
-		}
-
-		protected void dropSpecialItems(DamageSource source, int looting, boolean recentlyHitIn) {
-			super.dropSpecialItems(source, looting, recentlyHitIn);
 		}
 
 		@Override

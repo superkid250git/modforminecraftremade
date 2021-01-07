@@ -4,12 +4,6 @@ package net.superkid.testi.itemgroup;
 import net.superkid.testi.item.SightlygoldenappleItem;
 import net.superkid.testi.TestiModElements;
 
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.api.distmarker.Dist;
-
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemGroup;
-
 @TestiModElements.ModElement.Tag
 public class NonameItemGroup extends TestiModElements.ModElement {
 	public NonameItemGroup(TestiModElements instance) {

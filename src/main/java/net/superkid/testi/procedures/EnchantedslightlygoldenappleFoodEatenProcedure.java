@@ -2,11 +2,6 @@ package net.superkid.testi.procedures;
 
 import net.superkid.testi.TestiModElements;
 
-import net.minecraft.potion.Effects;
-import net.minecraft.potion.EffectInstance;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.Entity;
-
 import java.util.Map;
 
 @TestiModElements.ModElement.Tag
@@ -17,7 +12,8 @@ public class EnchantedslightlygoldenappleFoodEatenProcedure extends TestiModElem
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
-			System.err.println("Failed to load dependency entity for procedure EnchantedslightlygoldenappleFoodEaten!");
+			if (!dependencies.containsKey("entity"))
+				System.err.println("Failed to load dependency entity for procedure EnchantedslightlygoldenappleFoodEaten!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");

@@ -1,11 +1,12 @@
 {
-  "_fv": 10,
+  "_fv": 13,
   "_type": "item",
   "definition": {
     "renderType": 0,
     "texture": "s_k_i_n_5",
     "customModelName": "Normal",
     "name": "Bitcoin",
+    "rarity": "COMMON",
     "creativeTab": {
       "value": "CUSTOM:Noname"
     },

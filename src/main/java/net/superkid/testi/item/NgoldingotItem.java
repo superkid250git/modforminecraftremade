@@ -1,14 +1,10 @@
 
 package net.superkid.testi.item;
 
+import org.omg.CORBA.ObjectHolder;
+
 import net.superkid.testi.itemgroup.NonameItemGroup;
 import net.superkid.testi.TestiModElements;
-
-import net.minecraftforge.registries.ObjectHolder;
-
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Item;
-import net.minecraft.block.BlockState;
 
 @TestiModElements.ModElement.Tag
 public class NgoldingotItem extends TestiModElements.ModElement {
@@ -24,7 +20,7 @@ public class NgoldingotItem extends TestiModElements.ModElement {
 	}
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
-			super(new Item.Properties().group(NonameItemGroup.tab).maxStackSize(64));
+			super(new Item.Properties().group(NonameItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON));
 			setRegistryName("notgoldingot");
 		}
 

@@ -1,0 +1,84 @@
+{
+  "_fv": 13,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 176,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "text": "Adminstick",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Adminstick",
+          "x": 186,
+          "y": 44
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Night",
+          "onClick": {
+            "name": "Timenight"
+          },
+          "width": 50,
+          "height": 20,
+          "name": "Night",
+          "x": 232,
+          "y": 68
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Day",
+          "onClick": {
+            "name": "Timeday"
+          },
+          "width": 40,
+          "height": 20,
+          "name": "Day",
+          "x": 152,
+          "y": 68
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "toggledownfall",
+          "onClick": {
+            "name": "Setrain"
+          },
+          "width": 95,
+          "height": 20,
+          "name": "toggledownfall",
+          "x": 163,
+          "y": 108
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "toggle gamemode",
+          "onClick": {
+            "name": "Togglegamemode"
+          },
+          "width": 100,
+          "height": 20,
+          "name": "toggle gamemode",
+          "x": 161,
+          "y": 146
+        }
+      }
+    ]
+  }
+}

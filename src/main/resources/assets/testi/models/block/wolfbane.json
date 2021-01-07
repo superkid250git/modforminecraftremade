@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "testi:blocks/wolfsbane",
+    "particle": "testi:blocks/wolfsbane"
+  }
+}

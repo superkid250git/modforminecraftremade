@@ -1,15 +1,10 @@
 
 package net.superkid.testi.item;
 
+import org.omg.CORBA.ObjectHolder;
+
 import net.superkid.testi.itemgroup.NonameItemGroup;
 import net.superkid.testi.TestiModElements;
-
-import net.minecraftforge.registries.ObjectHolder;
-
-import net.minecraft.item.UseAction;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Item;
-import net.minecraft.item.Food;
 
 @TestiModElements.ModElement.Tag
 public class BurritoItem extends TestiModElements.ModElement {
@@ -25,12 +20,13 @@ public class BurritoItem extends TestiModElements.ModElement {
 	}
 	public static class FoodItemCustom extends Item {
 		public FoodItemCustom() {
-			super(new Item.Properties().group(NonameItemGroup.tab).maxStackSize(64).food((new Food.Builder()).hunger(4).saturation(0.3f).build()));
+			super(new Item.Properties().group(NonameItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON)
+					.food((new Food.Builder()).hunger(4).saturation(0.3f).build()));
 			setRegistryName("burrito");
 		}
 
 		@Override
-		public UseAction getUseAction(ItemStack par1ItemStack) {
+		public UseAction getUseAction(ItemStack itemstack) {
 			return UseAction.EAT;
 		}
 	}

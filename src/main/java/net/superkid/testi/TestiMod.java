@@ -17,30 +17,14 @@
  */
 package net.superkid.testi;
 
-import net.minecraftforge.fml.network.simple.SimpleChannel;
-import net.minecraftforge.fml.network.NetworkRegistry;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.RegistryEvent;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.api.distmarker.Dist;
-
-import net.minecraft.world.biome.Biome;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.item.Item;
-import net.minecraft.entity.EntityType;
-import net.minecraft.enchantment.Enchantment;
-import net.minecraft.block.Block;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 import java.util.function.Supplier;
 
 @Mod("testi")
 public class TestiMod {
+	public static final Logger LOGGER = LogManager.getLogger(TestiMod.class);
 	private static final String PROTOCOL_VERSION = "1";
 	public static final SimpleChannel PACKET_HANDLER = NetworkRegistry.newSimpleChannel(new ResourceLocation("testi", "testi"),
 			() -> PROTOCOL_VERSION, PROTOCOL_VERSION::equals, PROTOCOL_VERSION::equals);

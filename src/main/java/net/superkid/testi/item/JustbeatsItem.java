@@ -1,15 +1,10 @@
 
 package net.superkid.testi.item;
 
+import org.omg.CORBA.ObjectHolder;
+
 import net.superkid.testi.itemgroup.NonameItemGroup;
 import net.superkid.testi.TestiModElements;
-
-import net.minecraftforge.registries.ObjectHolder;
-
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.item.Rarity;
-import net.minecraft.item.MusicDiscItem;
-import net.minecraft.item.Item;
 
 @TestiModElements.ModElement.Tag
 public class JustbeatsItem extends TestiModElements.ModElement {
