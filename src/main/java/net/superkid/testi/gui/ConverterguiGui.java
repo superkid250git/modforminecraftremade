@@ -90,9 +90,13 @@ public class ConverterguiGui extends TestiModElements.ModElement {
 					}
 				}
 			}
-			this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 49, 32) {
+			this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 35, 30) {
+				@Override
+				public boolean isItemValid(ItemStack stack) {
+					return (new ItemStack(Items.GOLD_INGOT, (int) (1)).getItem() == stack.getItem());
+				}
 			}));
-			this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 105, 31) {
+			this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 124, 30) {
 				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return false;
@@ -227,7 +231,7 @@ public class ConverterguiGui extends TestiModElements.ModElement {
 
 		@Override
 		protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) {
-			this.font.drawString("Converter", 65, 7, -12829636);
+			this.font.drawString("Gold Converter", 53, 6, -12829636);
 		}
 
 		@Override

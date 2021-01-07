@@ -998,6 +998,15 @@
           }
         ]
       }
+    },
+    {
+      "name": "Kk",
+      "type": "structure",
+      "sortid": 63,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "kk"
     }
   ],
   "variable_elements": [],

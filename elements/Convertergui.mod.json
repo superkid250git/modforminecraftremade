@@ -13,28 +13,28 @@
       {
         "type": "label",
         "data": {
-          "text": "Converter",
+          "text": "Gold Converter",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "Converter",
-          "x": 191,
-          "y": 44
+          "name": "Gold Converter",
+          "x": 179,
+          "y": 43
         }
       },
       {
         "type": "inputslot",
         "data": {
           "inputLimit": {
-            "value": ""
+            "value": "Items.GOLD_INGOT"
           },
           "id": 0,
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": true,
           "name": "Slot #0",
-          "x": 174,
-          "y": 68
+          "x": 160,
+          "y": 66
         }
       },
       {
@@ -44,8 +44,8 @@
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": true,
           "name": "Slot #1",
-          "x": 230,
-          "y": 67
+          "x": 249,
+          "y": 66
         }
       },
       {
