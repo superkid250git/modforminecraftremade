@@ -1,10 +1,16 @@
 
 package net.superkid.testi.item;
 
-import org.omg.CORBA.ObjectHolder;
-
 import net.superkid.testi.itemgroup.NonameItemGroup;
 import net.superkid.testi.TestiModElements;
+
+import net.minecraftforge.registries.ObjectHolder;
+
+import net.minecraft.item.UseAction;
+import net.minecraft.item.Rarity;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.Item;
+import net.minecraft.item.Food;
 
 @TestiModElements.ModElement.Tag
 public class BurritoItem extends TestiModElements.ModElement {

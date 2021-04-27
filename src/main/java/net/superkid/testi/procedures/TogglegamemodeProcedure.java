@@ -1,6 +1,23 @@
 package net.superkid.testi.procedures;
 
 import net.superkid.testi.TestiModElements;
+import net.superkid.testi.TestiMod;
+
+import net.minecraft.world.server.ServerWorld;
+import net.minecraft.world.World;
+import net.minecraft.world.IWorld;
+import net.minecraft.world.GameType;
+import net.minecraft.util.text.StringTextComponent;
+import net.minecraft.util.math.vector.Vector3d;
+import net.minecraft.util.math.vector.Vector2f;
+import net.minecraft.entity.player.ServerPlayerEntity;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.Entity;
+import net.minecraft.command.ICommandSource;
+import net.minecraft.command.CommandSource;
+import net.minecraft.client.network.play.NetworkPlayerInfo;
+import net.minecraft.client.entity.player.AbstractClientPlayerEntity;
+import net.minecraft.client.Minecraft;
 
 import java.util.Map;
 
@@ -13,27 +30,27 @@ public class TogglegamemodeProcedure extends TestiModElements.ModElement {
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				System.err.println("Failed to load dependency entity for procedure Togglegamemode!");
+				TestiMod.LOGGER.warn("Failed to load dependency entity for procedure Togglegamemode!");
 			return;
 		}
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
-				System.err.println("Failed to load dependency x for procedure Togglegamemode!");
+				TestiMod.LOGGER.warn("Failed to load dependency x for procedure Togglegamemode!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
 			if (!dependencies.containsKey("y"))
-				System.err.println("Failed to load dependency y for procedure Togglegamemode!");
+				TestiMod.LOGGER.warn("Failed to load dependency y for procedure Togglegamemode!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
 			if (!dependencies.containsKey("z"))
-				System.err.println("Failed to load dependency z for procedure Togglegamemode!");
+				TestiMod.LOGGER.warn("Failed to load dependency z for procedure Togglegamemode!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				System.err.println("Failed to load dependency world for procedure Togglegamemode!");
+				TestiMod.LOGGER.warn("Failed to load dependency world for procedure Togglegamemode!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
@@ -45,9 +62,9 @@ public class TogglegamemodeProcedure extends TestiModElements.ModElement {
 			public boolean checkGamemode(Entity _ent) {
 				if (_ent instanceof ServerPlayerEntity) {
 					return ((ServerPlayerEntity) _ent).interactionManager.getGameType() == GameType.SURVIVAL;
-				} else if (_ent instanceof PlayerEntity && _ent.world.isRemote) {
+				} else if (_ent instanceof PlayerEntity && _ent.world.isRemote()) {
 					NetworkPlayerInfo _npi = Minecraft.getInstance().getConnection()
-							.getPlayerInfo(((ClientPlayerEntity) _ent).getGameProfile().getId());
+							.getPlayerInfo(((AbstractClientPlayerEntity) _ent).getGameProfile().getId());
 					return _npi != null && _npi.getGameType() == GameType.SURVIVAL;
 				}
 				return false;
@@ -57,19 +74,19 @@ public class TogglegamemodeProcedure extends TestiModElements.ModElement {
 				((PlayerEntity) entity).setGameType(GameType.SURVIVAL);
 			if (entity instanceof PlayerEntity)
 				((PlayerEntity) entity).closeScreen();
-			if (!world.getWorld().isRemote && world.getWorld().getServer() != null) {
-				world.getWorld().getServer().getCommandManager().handleCommand(
-						new CommandSource(ICommandSource.DUMMY, new Vec3d(x, y, z), Vec2f.ZERO, (ServerWorld) world, 4, "",
-								new StringTextComponent(""), world.getWorld().getServer(), null).withFeedbackDisabled(),
+			if (world instanceof ServerWorld) {
+				((World) world).getServer().getCommandManager().handleCommand(
+						new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
+								new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
 						"tell @p you are in Survival mode");
 			}
 		} else if ((new Object() {
 			public boolean checkGamemode(Entity _ent) {
 				if (_ent instanceof ServerPlayerEntity) {
 					return ((ServerPlayerEntity) _ent).interactionManager.getGameType() == GameType.CREATIVE;
-				} else if (_ent instanceof PlayerEntity && _ent.world.isRemote) {
+				} else if (_ent instanceof PlayerEntity && _ent.world.isRemote()) {
 					NetworkPlayerInfo _npi = Minecraft.getInstance().getConnection()
-							.getPlayerInfo(((ClientPlayerEntity) _ent).getGameProfile().getId());
+							.getPlayerInfo(((AbstractClientPlayerEntity) _ent).getGameProfile().getId());
 					return _npi != null && _npi.getGameType() == GameType.CREATIVE;
 				}
 				return false;
@@ -79,19 +96,19 @@ public class TogglegamemodeProcedure extends TestiModElements.ModElement {
 				((PlayerEntity) entity).setGameType(GameType.CREATIVE);
 			if (entity instanceof PlayerEntity)
 				((PlayerEntity) entity).closeScreen();
-			if (!world.getWorld().isRemote && world.getWorld().getServer() != null) {
-				world.getWorld().getServer().getCommandManager().handleCommand(
-						new CommandSource(ICommandSource.DUMMY, new Vec3d(x, y, z), Vec2f.ZERO, (ServerWorld) world, 4, "",
-								new StringTextComponent(""), world.getWorld().getServer(), null).withFeedbackDisabled(),
+			if (world instanceof ServerWorld) {
+				((World) world).getServer().getCommandManager().handleCommand(
+						new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
+								new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
 						"tell @p you are in Creative mode");
 			}
 		} else if ((new Object() {
 			public boolean checkGamemode(Entity _ent) {
 				if (_ent instanceof ServerPlayerEntity) {
 					return ((ServerPlayerEntity) _ent).interactionManager.getGameType() == GameType.ADVENTURE;
-				} else if (_ent instanceof PlayerEntity && _ent.world.isRemote) {
+				} else if (_ent instanceof PlayerEntity && _ent.world.isRemote()) {
 					NetworkPlayerInfo _npi = Minecraft.getInstance().getConnection()
-							.getPlayerInfo(((ClientPlayerEntity) _ent).getGameProfile().getId());
+							.getPlayerInfo(((AbstractClientPlayerEntity) _ent).getGameProfile().getId());
 					return _npi != null && _npi.getGameType() == GameType.ADVENTURE;
 				}
 				return false;
@@ -101,10 +118,10 @@ public class TogglegamemodeProcedure extends TestiModElements.ModElement {
 				((PlayerEntity) entity).setGameType(GameType.ADVENTURE);
 			if (entity instanceof PlayerEntity)
 				((PlayerEntity) entity).closeScreen();
-			if (!world.getWorld().isRemote && world.getWorld().getServer() != null) {
-				world.getWorld().getServer().getCommandManager().handleCommand(
-						new CommandSource(ICommandSource.DUMMY, new Vec3d(x, y, z), Vec2f.ZERO, (ServerWorld) world, 4, "",
-								new StringTextComponent(""), world.getWorld().getServer(), null).withFeedbackDisabled(),
+			if (world instanceof ServerWorld) {
+				((World) world).getServer().getCommandManager().handleCommand(
+						new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
+								new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
 						"tell @p you are in Adventure mode");
 			}
 		}

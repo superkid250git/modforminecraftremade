@@ -6,14 +6,31 @@ import net.superkid.testi.procedures.TimenightProcedure;
 import net.superkid.testi.procedures.TimedayProcedure;
 import net.superkid.testi.procedures.SetrainProcedure;
 import net.superkid.testi.TestiModElements;
-import net.superkid.testi.TestiMod;
+
+import net.minecraftforge.items.ItemStackHandler;
+import net.minecraftforge.items.IItemHandler;
+import net.minecraftforge.fml.network.NetworkEvent;
+import net.minecraftforge.fml.network.IContainerFactory;
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.fml.DeferredWorkQueue;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.api.distmarker.Dist;
+
+import net.minecraft.world.World;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.network.PacketBuffer;
+import net.minecraft.inventory.container.Slot;
+import net.minecraft.inventory.container.ContainerType;
+import net.minecraft.inventory.container.Container;
+import net.minecraft.entity.player.PlayerInventory;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.client.gui.ScreenManager;
 
 import java.util.function.Supplier;
 import java.util.Map;
 import java.util.HashMap;
-
-import java.awt.Container;
-import java.awt.Button;
 
 @TestiModElements.ModElement.Tag
 public class AdminstickguiGui extends TestiModElements.ModElement {
@@ -26,17 +43,17 @@ public class AdminstickguiGui extends TestiModElements.ModElement {
 		elements.addNetworkMessage(GUISlotChangedMessage.class, GUISlotChangedMessage::buffer, GUISlotChangedMessage::new,
 				GUISlotChangedMessage::handler);
 		containerType = new ContainerType<>(new GuiContainerModFactory());
-		FMLJavaModLoadingContext.get().getModEventBus().register(this);
+		FMLJavaModLoadingContext.get().getModEventBus().register(new ContainerRegisterHandler());
 	}
-
+	private static class ContainerRegisterHandler {
+		@SubscribeEvent
+		public void registerContainer(RegistryEvent.Register<ContainerType<?>> event) {
+			event.getRegistry().register(containerType.setRegistryName("adminstickgui"));
+		}
+	}
 	@OnlyIn(Dist.CLIENT)
 	public void initElements() {
-		DeferredWorkQueue.runLater(() -> ScreenManager.registerFactory(containerType, GuiWindow::new));
-	}
-
-	@SubscribeEvent
-	public void registerContainer(RegistryEvent.Register<ContainerType<?>> event) {
-		event.getRegistry().register(containerType.setRegistryName("adminstickgui"));
+		DeferredWorkQueue.runLater(() -> ScreenManager.registerFactory(containerType, AdminstickguiGuiWindow::new));
 	}
 	public static class GuiContainerModFactory implements IContainerFactory {
 		public GuiContainerMod create(int id, PlayerInventory inv, PacketBuffer extraData) {
@@ -45,9 +62,9 @@ public class AdminstickguiGui extends TestiModElements.ModElement {
 	}
 
 	public static class GuiContainerMod extends Container implements Supplier<Map<Integer, Slot>> {
-		private World world;
-		private PlayerEntity entity;
-		private int x, y, z;
+		World world;
+		PlayerEntity entity;
+		int x, y, z;
 		private IItemHandler internal;
 		private Map<Integer, Slot> customSlots = new HashMap<>();
 		private boolean bound = false;
@@ -72,86 +89,6 @@ public class AdminstickguiGui extends TestiModElements.ModElement {
 		@Override
 		public boolean canInteractWith(PlayerEntity player) {
 			return true;
-		}
-	}
-
-	@OnlyIn(Dist.CLIENT)
-	public static class GuiWindow extends ContainerScreen<GuiContainerMod> {
-		private World world;
-		private int x, y, z;
-		private PlayerEntity entity;
-		public GuiWindow(GuiContainerMod container, PlayerInventory inventory, ITextComponent text) {
-			super(container, inventory, text);
-			this.world = container.world;
-			this.x = container.x;
-			this.y = container.y;
-			this.z = container.z;
-			this.entity = container.entity;
-			this.xSize = 176;
-			this.ySize = 166;
-		}
-		private static final ResourceLocation texture = new ResourceLocation("testi:textures/adminstickgui.png");
-		@Override
-		public void render(int mouseX, int mouseY, float partialTicks) {
-			this.renderBackground();
-			super.render(mouseX, mouseY, partialTicks);
-			this.renderHoveredToolTip(mouseX, mouseY);
-		}
-
-		@Override
-		protected void drawGuiContainerBackgroundLayer(float par1, int par2, int par3) {
-			GL11.glColor4f(1, 1, 1, 1);
-			Minecraft.getInstance().getTextureManager().bindTexture(texture);
-			int k = (this.width - this.xSize) / 2;
-			int l = (this.height - this.ySize) / 2;
-			this.blit(k, l, 0, 0, this.xSize, this.ySize, this.xSize, this.ySize);
-		}
-
-		@Override
-		public boolean keyPressed(int key, int b, int c) {
-			if (key == 256) {
-				this.minecraft.player.closeScreen();
-				return true;
-			}
-			return super.keyPressed(key, b, c);
-		}
-
-		@Override
-		public void tick() {
-			super.tick();
-		}
-
-		@Override
-		protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) {
-			this.font.drawString("Adminstick", 60, 7, -12829636);
-		}
-
-		@Override
-		public void removed() {
-			super.removed();
-			Minecraft.getInstance().keyboardListener.enableRepeatEvents(false);
-		}
-
-		@Override
-		public void init(Minecraft minecraft, int width, int height) {
-			super.init(minecraft, width, height);
-			minecraft.keyboardListener.enableRepeatEvents(true);
-			this.addButton(new Button(this.guiLeft + 106, this.guiTop + 31, 50, 20, "Night", e -> {
-				TestiMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(0, x, y, z));
-				handleButtonAction(entity, 0, x, y, z);
-			}));
-			this.addButton(new Button(this.guiLeft + 26, this.guiTop + 31, 40, 20, "Day", e -> {
-				TestiMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(1, x, y, z));
-				handleButtonAction(entity, 1, x, y, z);
-			}));
-			this.addButton(new Button(this.guiLeft + 37, this.guiTop + 71, 95, 20, "toggledownfall", e -> {
-				TestiMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(2, x, y, z));
-				handleButtonAction(entity, 2, x, y, z);
-			}));
-			this.addButton(new Button(this.guiLeft + 35, this.guiTop + 109, 100, 20, "toggle gamemode", e -> {
-				TestiMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(3, x, y, z));
-				handleButtonAction(entity, 3, x, y, z);
-			}));
 		}
 	}
 
@@ -236,7 +173,7 @@ public class AdminstickguiGui extends TestiModElements.ModElement {
 			context.setPacketHandled(true);
 		}
 	}
-	private static void handleButtonAction(PlayerEntity entity, int buttonID, int x, int y, int z) {
+	static void handleButtonAction(PlayerEntity entity, int buttonID, int x, int y, int z) {
 		World world = entity.world;
 		// security measure to prevent arbitrary chunk generation
 		if (!world.isBlockLoaded(new BlockPos(x, y, z)))

@@ -1,12 +1,19 @@
 
 package net.superkid.testi.block;
 
-import org.omg.CORBA.ObjectHolder;
-
 import net.superkid.testi.itemgroup.NonameItemGroup;
 import net.superkid.testi.TestiModElements;
 
+import net.minecraftforge.registries.ObjectHolder;
+
+import net.minecraft.loot.LootContext;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.Item;
+import net.minecraft.item.BlockItem;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.SoundType;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.Block;
 
 import java.util.List;
 import java.util.Collections;
@@ -26,7 +33,7 @@ public class SupergoldblockBlock extends TestiModElements.ModElement {
 	}
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.IRON).sound(SoundType.METAL).hardnessAndResistance(1f, 10f).lightValue(0));
+			super(Block.Properties.create(Material.IRON).sound(SoundType.METAL).hardnessAndResistance(1f, 10f).setLightLevel(s -> 0));
 			setRegistryName("supergoldblock");
 		}
 

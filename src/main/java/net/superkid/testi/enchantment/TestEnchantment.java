@@ -1,9 +1,13 @@
 
 package net.superkid.testi.enchantment;
 
-import org.omg.CORBA.ObjectHolder;
-
 import net.superkid.testi.TestiModElements;
+
+import net.minecraftforge.registries.ObjectHolder;
+
+import net.minecraft.inventory.EquipmentSlotType;
+import net.minecraft.enchantment.EnchantmentType;
+import net.minecraft.enchantment.Enchantment;
 
 @TestiModElements.ModElement.Tag
 public class TestEnchantment extends TestiModElements.ModElement {
@@ -19,7 +23,7 @@ public class TestEnchantment extends TestiModElements.ModElement {
 	}
 	public static class CustomEnchantment extends Enchantment {
 		public CustomEnchantment(EquipmentSlotType... slots) {
-			super(Enchantment.Rarity.VERY_RARE, EnchantmentType.ALL, slots);
+			super(Enchantment.Rarity.VERY_RARE, EnchantmentType.DIGGER, slots);
 		}
 
 		@Override

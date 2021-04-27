@@ -2,11 +2,19 @@ package net.superkid.testi.procedures;
 
 import net.superkid.testi.item.UlitmateCustomNightMainMenuItem;
 import net.superkid.testi.TestiModElements;
+import net.superkid.testi.TestiMod;
+
+import net.minecraft.item.Items;
+import net.minecraft.item.ItemStack;
+import net.minecraft.inventory.container.Slot;
+import net.minecraft.inventory.container.Container;
+import net.minecraft.entity.player.ServerPlayerEntity;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.Entity;
+import net.minecraft.block.Blocks;
 
 import java.util.function.Supplier;
 import java.util.Map;
-
-import java.awt.Container;
 
 @TestiModElements.ModElement.Tag
 public class GoldtodiamondProcedure extends TestiModElements.ModElement {
@@ -17,7 +25,7 @@ public class GoldtodiamondProcedure extends TestiModElements.ModElement {
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				System.err.println("Failed to load dependency entity for procedure Goldtodiamond!");
+				TestiMod.LOGGER.warn("Failed to load dependency entity for procedure Goldtodiamond!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");

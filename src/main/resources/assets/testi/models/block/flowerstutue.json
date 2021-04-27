@@ -1,0 +1,9 @@
+{
+  "parent": "testi:custom/model",
+  "textures": {
+    "all": "testi:blocks/temp",
+    "particle": "testi:blocks/temp",
+    "0": "testi:blocks/alex",
+    "1": "testi:blocks/texture"
+  }
+}

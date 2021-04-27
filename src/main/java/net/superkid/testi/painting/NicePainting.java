@@ -3,6 +3,12 @@ package net.superkid.testi.painting;
 
 import net.superkid.testi.TestiModElements;
 
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.event.RegistryEvent;
+
+import net.minecraft.entity.item.PaintingType;
+
 @TestiModElements.ModElement.Tag
 public class NicePainting extends TestiModElements.ModElement {
 	public NicePainting(TestiModElements instance) {

@@ -2,14 +2,43 @@
 package net.superkid.testi.entity;
 
 import net.superkid.testi.itemgroup.NonameItemGroup;
+import net.superkid.testi.entity.renderer.FgemRenderer;
 import net.superkid.testi.TestiModElements;
+
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.fml.network.NetworkHooks;
+import net.minecraftforge.fml.network.FMLPlayMessages;
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
+
+import net.minecraft.world.World;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.DamageSource;
+import net.minecraft.network.IPacket;
+import net.minecraft.item.SpawnEggItem;
+import net.minecraft.item.Item;
+import net.minecraft.entity.ai.goal.SwimGoal;
+import net.minecraft.entity.ai.goal.RandomWalkingGoal;
+import net.minecraft.entity.ai.goal.MeleeAttackGoal;
+import net.minecraft.entity.ai.goal.LookRandomlyGoal;
+import net.minecraft.entity.ai.goal.HurtByTargetGoal;
+import net.minecraft.entity.ai.attributes.Attributes;
+import net.minecraft.entity.ai.attributes.AttributeModifierMap;
+import net.minecraft.entity.MobEntity;
+import net.minecraft.entity.EntityType;
+import net.minecraft.entity.EntityClassification;
+import net.minecraft.entity.CreatureEntity;
+import net.minecraft.entity.CreatureAttribute;
 
 @TestiModElements.ModElement.Tag
 public class FgemEntity extends TestiModElements.ModElement {
 	public static EntityType entity = null;
 	public FgemEntity(TestiModElements instance) {
 		super(instance, 48);
-		FMLJavaModLoadingContext.get().getModEventBus().register(this);
+		FMLJavaModLoadingContext.get().getModEventBus().register(new FgemRenderer.ModelRegisterHandler());
+		FMLJavaModLoadingContext.get().getModEventBus().register(new EntityAttributesRegisterHandler());
 	}
 
 	@Override
@@ -22,20 +51,21 @@ public class FgemEntity extends TestiModElements.ModElement {
 				.setRegistryName("fgem_spawn_egg"));
 	}
 
-	@SubscribeEvent
-	@OnlyIn(Dist.CLIENT)
-	public void registerModels(ModelRegistryEvent event) {
-		RenderingRegistry.registerEntityRenderingHandler(entity, renderManager -> {
-			BipedRenderer customRender = new BipedRenderer(renderManager, new BipedModel(0), 0.5f) {
-				@Override
-				public ResourceLocation getEntityTexture(Entity entity) {
-					return new ResourceLocation("testi:textures/fgem.png");
-				}
-			};
-			customRender.addLayer(new BipedArmorLayer(customRender, new BipedModel(0.5f), new BipedModel(1)));
-			return customRender;
-		});
+	@Override
+	public void init(FMLCommonSetupEvent event) {
 	}
+	private static class EntityAttributesRegisterHandler {
+		@SubscribeEvent
+		public void onEntityAttributeCreation(EntityAttributeCreationEvent event) {
+			AttributeModifierMap.MutableAttribute ammma = MobEntity.func_233666_p_();
+			ammma = ammma.createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.3);
+			ammma = ammma.createMutableAttribute(Attributes.MAX_HEALTH, 24);
+			ammma = ammma.createMutableAttribute(Attributes.ARMOR, 0);
+			ammma = ammma.createMutableAttribute(Attributes.ATTACK_DAMAGE, 3);
+			event.put(entity, ammma.create());
+		}
+	}
+
 	public static class CustomEntity extends CreatureEntity {
 		public CustomEntity(FMLPlayMessages.SpawnEntity packet, World world) {
 			this(entity, world);
@@ -81,20 +111,6 @@ public class FgemEntity extends TestiModElements.ModElement {
 		@Override
 		public net.minecraft.util.SoundEvent getDeathSound() {
 			return (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.death"));
-		}
-
-		@Override
-		protected void registerAttributes() {
-			super.registerAttributes();
-			if (this.getAttribute(SharedMonsterAttributes.MOVEMENT_SPEED) != null)
-				this.getAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(0.3);
-			if (this.getAttribute(SharedMonsterAttributes.MAX_HEALTH) != null)
-				this.getAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(24);
-			if (this.getAttribute(SharedMonsterAttributes.ARMOR) != null)
-				this.getAttribute(SharedMonsterAttributes.ARMOR).setBaseValue(0);
-			if (this.getAttribute(SharedMonsterAttributes.ATTACK_DAMAGE) == null)
-				this.getAttributes().registerAttribute(SharedMonsterAttributes.ATTACK_DAMAGE);
-			this.getAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).setBaseValue(3);
 		}
 	}
 }

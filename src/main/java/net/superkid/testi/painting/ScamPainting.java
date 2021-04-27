@@ -3,6 +3,12 @@ package net.superkid.testi.painting;
 
 import net.superkid.testi.TestiModElements;
 
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.event.RegistryEvent;
+
+import net.minecraft.entity.item.PaintingType;
+
 @TestiModElements.ModElement.Tag
 public class ScamPainting extends TestiModElements.ModElement {
 	public ScamPainting(TestiModElements instance) {

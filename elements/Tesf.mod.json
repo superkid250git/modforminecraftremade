@@ -1,0 +1,19 @@
+{
+  "_fv": 18,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:Test12.helmet"
+      },
+      {
+        "value": "CUSTOM:Adminstick"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "name": "onlycreative",
+    "namespace": "mod"
+  }
+}
